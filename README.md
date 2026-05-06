@@ -68,7 +68,8 @@ To replicate the physical architecture of this system, you will need the followi
 *   **Peripherals:** IP/CCTV Cameras, jumper wires, breadboards, and appropriate power supplies.
 
 ---
-![hardwaree](assets/backend.jpg)
+![hardware](assets/backend.png)
+
 ## ⭐ System Workflow & Data Pipeline
 
 This project operates on a distributed architecture, merging embedded hardware, computer vision, and machine learning into a single data pipeline:
