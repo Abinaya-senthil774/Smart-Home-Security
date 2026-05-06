@@ -40,7 +40,7 @@ smart-home-security/
 ```
 
 ---
-
+![hardware](assets/flowcharts/logic.png)
 ## ⭐ Key Features
 
 *   **Dual-Layer Monitoring:** Integrates both exterior CCTV analysis and interior environmental sensor processing into a single, comprehensive system.
@@ -78,11 +78,13 @@ This project operates on a distributed architecture, merging embedded hardware, 
 *   **Hardware:** IP/CCTV cameras mounted outside, connected to local edge nodes (Raspberry Pi A & B).
 *   **Software (Vision Processing):** Captures live video feeds and applies MOG2 for background subtraction to detect motion. If motion is detected, it uses HOG + Non-Maximum Suppression (NMS) to detect human shapes. OpenCV's Haar Cascades detect faces, and DeepFace verifies them against known family members.
 *   **Flow:** Video Capture ➔ Motion Detection ➔ Human/Face Detection ➔ Face Verification.
+![exterior](assets/CCTV_and_Sensor_Placement/house_CCTV.png)
 
 **2. Interior Security Segment**
 *   **Hardware:** A localized sensor suite in each room connected to an Arduino Mega.
 *   **Software (Edge Collection):** The Arduino script reads analog and digital pins, formats the sensor states into a structured JSON payload, and transmits it via USB serial.
 *   **Flow:** Environmental Changes ➔ Analog/Digital Sensors ➔ Arduino Processing ➔ JSON Serial Output.
+![interior](assets/CCTV_and_Sensor_Placement/inside_house.png)
 
 **3. Integration & Central Processing (The "Brain")**
 *   **Hardware:** A Central Raspberry Pi acting as the main hub.
@@ -94,7 +96,7 @@ This project operates on a distributed architecture, merging embedded hardware, 
 *   **Software (Database & Dashboard):** ML predictions, camera logs, and raw sensor data are committed to a PostgreSQL database utilizing TimescaleDB. A Node.js/Express backend queries this database and serves the data to an HTML/JS frontend dashboard. 
 *   **Instant Alerts:** If an unknown face is detected outside, a Tkinter dialog box immediately prompts the owner for verification.
 *   **Flow:** Python Client ➔ PostgreSQL/TimescaleDB ➔ Node.js API ➔ Web Dashboard & Desktop Alerts.
-
+![frontend](assets/flowcharts/frontend.jpg)
 ---
 
 ## ⭐ Installation & Setup
