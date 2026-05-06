@@ -19,11 +19,11 @@ from ui_alerts import ask_user
 from vision_utils import detect_faces, verify_and_annotate_faces
 
 # Load the reference images of family members for face recognition
-family_images = {
-    "Family Member 1": r"C:\Users\sabin\OneDrive\Pictures\Camera Roll\WIN_20250320_19_37_38_Pro.jpg",
-    "Family Member 2": r"C:\Users\sabin\OneDrive\Pictures\Camera Roll\WIN_20250320_19_37_38_Pro.jpg"
-    # Add as many family members as needed
-}
+with open('config.json', 'r') as config_file:
+    config = json.load(config_file)
+
+family_images = config['family_images']
+camera_id = config['camera_id']
 
 # Initialize video capture (camera feed)
 video_capture = cv2.VideoCapture(0)
