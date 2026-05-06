@@ -68,7 +68,7 @@ To replicate the physical architecture of this system, you will need the followi
 *   **Peripherals:** IP/CCTV Cameras, jumper wires, breadboards, and appropriate power supplies.
 
 ---
-![hardware](assets/backend.png)
+![hardware](assets/flowcharts/backend.jpg)
 
 ## ⭐ System Workflow & Data Pipeline
 
