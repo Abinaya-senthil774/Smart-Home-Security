@@ -30,7 +30,7 @@ smart-home-security/
 │
 ├── interior/                  # Sensor Data ML and Occupancy Prediction
 │   ├── data/                  # Directory for raw and cleaned CSV datasets
-│   ├── models/                # Saved ML models (e.g., occupancy_model.pkl, scaler.pkl)
+│   ├── models/                # Saved ML models 
 │   ├── data_pipeline.py       # Data cleaning and statistical feature extraction
 │   ├── inference.py           # Real-time script for predicting occupancy from live data
 │   └── train_model.py         # Script to train and save the Logistic Regression/NN model
